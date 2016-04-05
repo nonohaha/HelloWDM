@@ -1,0 +1,32 @@
+;
+; HelloWDM.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=
+ClassGuid={10BD2AED-3323-4c21-B265-75D5BFF626B7}
+Provider=nonohaha
+DriverVer=
+CatalogFile=nonohaha.cat
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+HelloWDM.sys = 1, MyDriver_Check
+
+[Manufacturer]
+%ManufacturerName%=Standard,NT$ARCH$
+
+[Standard.NT$ARCH$]
+
+
+[Strings]
+ManufacturerName=""
+ClassName=""
+DiskName="HelloWDM Source Disk"
